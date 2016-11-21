@@ -25,7 +25,7 @@
         android:text="@string/Click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button"
+        android:id="@+id/button_youhou"
         android:layout_marginTop="37dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true" />
@@ -35,8 +35,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
+        android:layout_alignLeft="@+id/button_youhou"
+        android:layout_alignStart="@+id/button_youhou"
         android:id="@+id/textView2" />
 
 
