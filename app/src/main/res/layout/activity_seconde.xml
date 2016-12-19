@@ -14,6 +14,7 @@
         android:layout_width="match_parent"
         android:id="@+id/rv_biere"
         android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@id/button_youhou"></android.support.v7.widget.RecyclerView>
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"></android.support.v7.widget.RecyclerView>
+
 </RelativeLayout>

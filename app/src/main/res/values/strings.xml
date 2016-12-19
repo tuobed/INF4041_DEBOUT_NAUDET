@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">ProjetMobile</string>
-    <string name="Click">button_text</string>
-    <string name="message">Coucou</string>
+    <string  name="app_name">Beer Lovers</string>
+    <string name="Click" translatable="false">button_text</string>
+    <string name="messageLien">You can then know more about the beer you were looking for by going on this website :</string>
+    <string name="messageGoogleMaps">Finally you can look for a pub and discover new beers with your friends !</string>
+    <string name="message">You are fed up with forgetting the beer names you drank ? Here you can download a list which contains most of the beers around the world</string>
 </resources>

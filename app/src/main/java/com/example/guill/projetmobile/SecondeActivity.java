@@ -1,12 +1,17 @@
 package com.example.guill.projetmobile;
 
+import android.app.NotificationManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.NotificationCompat;
 import android.support.v7.view.menu.MenuView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -47,20 +52,34 @@ public class SecondeActivity extends AppCompatActivity {
 
     public static final String TAG = "GetBiersServices";
 
-    public static final String BIERS_UPDATE = "com.octip.cours.inf4042_11.BIERS_UPDATE";
+    public static final String BIERS_UPDATE = "com.example.guill.projetmobile.BIERS_UPDATE";
         public class BierUpdate extends BroadcastReceiver{
 
             @Override
             public void onReceive(Context context, Intent intent) {
 
                 ((BiersAdapter)rv_biere.getAdapter()).setNewBiere(getBiersFromFile());
-                //action(this).show;
+                notification();
+
             }
+
+
+
+
         }
 
-    public void action (View v) {
-        Toast.makeText(getApplicationContext(),getString(R.string.message),Toast.LENGTH_LONG).show();
+    //Création d'une notification lors de la fin du téléchargement
+    public void notification () {
+        NotificationCompat.Builder mBuilder = (NotificationCompat.Builder) new NotificationCompat.Builder(this)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentTitle("Warning")
+                .setContentText("Your download is completed");
+
+        int mNotificationId = 001;
+        NotificationManager mNotifyMgr = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        mNotifyMgr.notify(mNotificationId, mBuilder.build());
     }
+
 
     private class BiersAdapter extends RecyclerView.Adapter<BiersAdapter.BierHolder> {
 
@@ -113,6 +132,8 @@ public class SecondeActivity extends AppCompatActivity {
 
 
     }
+
+
 
     public JSONArray getBiersFromFile() {
         try {

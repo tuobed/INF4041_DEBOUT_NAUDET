@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Amoureux de la bière</string>
+    <string name="message">Vous en avez marre d\'oublier le nom des bières que vous avez bu ? Ici vous pouvez télécharger une liste qui contient la plupart des bières à travers le monde</string>
+    <string name="messageGoogleMaps">Enfin vous pouvez chercher un bar et découvrir de nouvelles bières avec vos amis !</string>
+    <string name="messageLien">Vous pouvez ensuite en savoir davantage sur la bière en question en allant sur ce site :</string>
+</resources>

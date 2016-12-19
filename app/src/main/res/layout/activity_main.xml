@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -8,30 +9,85 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.guill.projetmobile.MainActivity">
-
+    tools:context="com.example.guill.projetmobile.FirstActivity">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
+        android:text="@string/message"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="14sp"
+        android:id="@+id/textViewMessage"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:gravity="center" />
+        android:layout_marginTop="28dp" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/beer"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/button_download"
+        android:layout_alignStart="@+id/button_download" />
 
     <Button
-        android:text="youhou"
+        android:text="Download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button_youhou"
-        android:layout_marginTop="37dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
+        android:id="@+id/button_download"
         android:onClick="ouvrirActivity"
-        />
+        android:layout_below="@+id/textViewMessage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:text="@string/messageLien"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_below="@+id/button_download"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="17dp" />
+
+    <TextView
+        android:text="@string/messageGoogleMaps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageLien"
+        android:layout_toStartOf="@+id/messageLien"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Web site"
+        android:id="@+id/messageLien"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/button_download"
+        android:layout_alignRight="@+id/imageView"
+        android:layout_alignEnd="@+id/imageView"
+        android:onClick="lien"
+        android:layout_alignLeft="@+id/button_download"
+        android:layout_alignStart="@+id/button_download" />
+
+    <Button
+        android:text="Google Maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonGoogleMaps"
+        android:onClick="googleMaps"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp" />
+
 
 </RelativeLayout>

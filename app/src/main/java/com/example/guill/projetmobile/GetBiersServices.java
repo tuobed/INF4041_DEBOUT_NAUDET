@@ -75,6 +75,7 @@ public class GetBiersServices extends IntentService {
 
         try {
             url = new URL("http://binouze.fabrigli.fr/bieres.json");
+            //url = new URL("http://www.scriptol.fr/cms/dynamic-menu.json");
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             conn.connect();
