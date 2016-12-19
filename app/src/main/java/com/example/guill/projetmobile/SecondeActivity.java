@@ -31,6 +31,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 
+//affichage dans mon recyclerview de ma list
 public class SecondeActivity extends AppCompatActivity {
 
     RecyclerView rv_biere;
